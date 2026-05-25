@@ -18,7 +18,7 @@ export default function DashboardPage() {
   if (storedRole) {
     setSelectedRole(storedRole);
 
-    fetch(`http://localhost:8080/api/roadmaps/${storedRole}`)
+   fetch(`https://career-roadmap-backend-production.up.railway.app/api/roadmaps/${storedRole}`)
       .then((res) => res.json())
       .then((data) => {
         setRoadmaps(data);
